@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:icon="@drawable/ic_clear_history"
+        app:key="clear_history_key"
+        app:summary="@string/clear_history_sub"
+        app:title="@string/clear_history" />
+
+    <Preference
+        app:icon="@drawable/ic_about"
+        app:key="about_key"
+        app:title="@string/about" />
+
+</PreferenceScreen>
