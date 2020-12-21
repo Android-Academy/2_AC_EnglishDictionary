@@ -15,9 +15,6 @@
     <string name="join_the_academy">Thanks for joining the Academy.</string>
     <string name="latest_version">You have the latest version installed.</string>
 
-
-
-
     <string name="github_username">vullnetlimani</string>
     <string name="github">GitHub</string>
     <string name="play_store">Play Store</string>
@@ -36,5 +33,17 @@
     <string name="word_not_founded">Word Not Founded</string>
     <string name="please_search_again">Please search again!</string>
     <string name="clear_history_sub">Here you can clear the history on your list</string>
+
+    <string-array name="text_size_title">
+        <item>Tiny</item>
+        <item>Normal</item>
+        <item>Big</item>
+    </string-array>
+
+    <string-array name="text_size_values">
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+    </string-array>
 
 </resources>

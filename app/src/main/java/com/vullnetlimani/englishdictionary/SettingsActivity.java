@@ -1,7 +1,9 @@
 package com.vullnetlimani.englishdictionary;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -11,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
@@ -47,9 +50,24 @@ public class SettingsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static class MySettingsFragment extends PreferenceFragmentCompat implements PreferenceManager.OnPreferenceTreeClickListener {
+
+    public static class MySettingsFragment extends PreferenceFragmentCompat implements PreferenceManager.OnPreferenceTreeClickListener, SharedPreferences.OnSharedPreferenceChangeListener {
         DatabaseHelper myDBHelper;
         private AppCompatActivity mParentActivity;
+        private SharedPreferences sharedPreferences;
+        private ListPreference listPreference;
+
+        @Override
+        public void onResume() {
+            super.onResume();
+            getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+        }
+
+        @Override
+        public void onPause() {
+            getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
+            super.onPause();
+        }
 
         public void setActivity(AppCompatActivity activity) {
             this.mParentActivity = activity;
@@ -59,6 +77,14 @@ public class SettingsActivity extends AppCompatActivity {
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.prefrences, rootKey);
             myDBHelper = new DatabaseHelper(mParentActivity, null);
+            sharedPreferences = getPreferenceManager().getSharedPreferences();
+
+            listPreference = findPreference("text_size_key");
+
+            SharedPreferences sharedPreferences = mParentActivity.getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+            String text_size = sharedPreferences.getString(Constants.TEXT_SIZE_PREF, "15");
+
+            listPreference.setSummary(getTextName(text_size));
         }
 
         @Override
@@ -81,6 +107,21 @@ public class SettingsActivity extends AppCompatActivity {
             }
 
             return false;
+        }
+
+        private String getTextName(String text_size) {
+
+            switch (text_size) {
+                case "10":
+                    return "Tiny";
+                case "15":
+                    return "Normal";
+                case "30":
+                    return "Big";
+                default:
+                    return "Normal";
+            }
+
         }
 
         private void showAlertDialog() {
@@ -110,7 +151,24 @@ public class SettingsActivity extends AppCompatActivity {
 
 
         }
-    }
 
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+            Log.d(Constants.TAG, "onSharedPreferenceChanged - key - " + key);
+
+            String value = sharedPreferences.getString(key, "");
+
+            Log.d(Constants.TAG, "onSharedPreferenceChanged - value - " + value);
+
+
+            SharedPreferences my_pref = mParentActivity.getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = my_pref.edit();
+            editor.putString(Constants.TEXT_SIZE_PREF, value);
+            editor.apply();
+
+
+            listPreference.setSummary(getTextName(value));
+        }
+    }
 
 }

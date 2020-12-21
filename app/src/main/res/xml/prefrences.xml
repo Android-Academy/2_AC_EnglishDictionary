@@ -7,6 +7,15 @@
         app:summary="@string/clear_history_sub"
         app:title="@string/clear_history" />
 
+    <ListPreference
+        app:defaultValue="15"
+        app:entries="@array/text_size_title"
+        app:entryValues="@array/text_size_values"
+        app:icon="@drawable/ic_text_size"
+        app:key="text_size_key"
+        app:summary="Normal"
+        app:title="Text Size" />
+
     <Preference
         app:icon="@drawable/ic_about"
         app:key="about_key"

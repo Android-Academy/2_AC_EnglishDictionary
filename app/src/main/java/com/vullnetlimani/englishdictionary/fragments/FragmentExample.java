@@ -1,5 +1,7 @@
 package com.vullnetlimani.englishdictionary.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.vullnetlimani.englishdictionary.R;
 import com.vullnetlimani.englishdictionary.WordMeaningActivity;
+import com.vullnetlimani.englishdictionary.util.Constants;
 
 public class FragmentExample extends Fragment {
     private final AppCompatActivity appCompatActivity;
@@ -31,6 +34,10 @@ public class FragmentExample extends Fragment {
         ImageView imageView = view.findViewById(R.id.imageView_icon);
 
         TextView textView = view.findViewById(R.id.textView_id);
+
+        SharedPreferences sharedPreferences = appCompatActivity.getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+        String text_size = sharedPreferences.getString(Constants.TEXT_SIZE_PREF, "15");
+        textView.setTextSize(Float.parseFloat(text_size));
 
         String getText = ((WordMeaningActivity) appCompatActivity).example;
 
