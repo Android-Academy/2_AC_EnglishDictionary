@@ -8,5 +8,3 @@ I am Vullnet Limani the tutor of that Academy, and we have learned a lot of tech
     <td><img src='https://github.com/vullnetlimani/EnglishDictionary_Academy/blob/master/assets/cover.jpg'></td>
   </tr>
 </table>
-
-#<a href='https://play.google.com/store/apps/details?id=com.rafapps.simplenotes'><img width=200 alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
