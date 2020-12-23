@@ -43,10 +43,10 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        if (item.getItemId() == android.R.id.home)
+        if (item.getItemId() == android.R.id.home) {
             finish();
-        overridePendingTransition(R.anim.push_in_left, R.anim.push_out_left);
-
+            overridePendingTransition(R.anim.push_in_left, R.anim.push_out_left);
+        }
         return super.onOptionsItemSelected(item);
     }
 
