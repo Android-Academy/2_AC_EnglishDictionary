@@ -1,6 +1,6 @@
 # English Dictionary
 
-This app is built while holding the Android Academy for Creative Hub, while creating this simple app we have learned how to use a lot of great techniques.
+This app is built while holding the Android Academy from Creative Hub, while creating this simple app we have learned how to use a lot of great techniques.
 
 <table>
   <tr>
