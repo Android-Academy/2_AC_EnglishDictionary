@@ -1,7 +1,6 @@
 # English Dictionary
 
-This app is built while holding the Android Academy form CreativeHub.
-I am Vullnet Limani the tutor of that Academy, and we have learned a lot of techniques while creating this simple app.
+This app is built while holding the Android Academy for Creative Hub, while creating this simple app we have learned how to use a lot of great techniques.
 
 <table>
   <tr>
