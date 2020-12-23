@@ -5,6 +5,9 @@ I am Vullnet Limani the tutor of that Academy, and we have learned a lot of tech
 
 <table>
   <tr>
-    <td><img src='https://github.com/vullnetlimani/EnglishDictionary_Academy/blob/master/assets/cover.jpg'></td>
+    <td><img src='https://github.com/vullnetlimani/EnglishDictionary_Academy/blob/master/assets/1.png'></td>
+    <td><img src='https://github.com/vullnetlimani/EnglishDictionary_Academy/blob/master/assets/2.png'></td>
+	    <td><img src='https://github.com/vullnetlimani/EnglishDictionary_Academy/blob/master/assets/3.png'></td>
+		    <td><img src='https://github.com/vullnetlimani/EnglishDictionary_Academy/blob/master/assets/4.png'></td>
   </tr>
 </table>
