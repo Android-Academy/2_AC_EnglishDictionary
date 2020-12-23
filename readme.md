@@ -5,7 +5,7 @@ I am Vullnet Limani the tutor of that Academy, and we have learned a lot of tech
 
 <table>
   <tr>
-    <td><img src='https://github.com/vullnetlimani/EnglishDictionary_Academy/blob/master/assets/cover.png'></td>
+    <td><img src='https://github.com/vullnetlimani/EnglishDictionary_Academy/blob/master/assets/cover.jpg'></td>
   </tr>
 </table>
 
