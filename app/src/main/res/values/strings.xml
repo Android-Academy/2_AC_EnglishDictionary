@@ -9,7 +9,7 @@
     <string name="settings">Settings</string>
     <string name="exit">Exit</string>
     <string name="not_text_founded">No text found</string>
-    <string name="about_desc">This app is created for demonstrating some techniques for creating cool Android apps, for the students of Creative Hub, how they can adapt those techniques to build their own Apps, this app is one of many projects that you can learn in the Android Academy Course, the motto there is learning by doing.</string>
+    <string name="about_desc">This app is created for demonstrating some techniques for creating cool Android apps, for the students of Creative Hub, how they can adapt those techniques to build their own Apps, this app is one of many projects that you can learn in the Android Academy Course.</string>
     <string name="about">About</string>
     <string name="clear_history">Clear History</string>
     <string name="join_the_academy">Thanks for joining the Academy.</string>
