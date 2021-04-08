@@ -39,13 +39,13 @@ public class RecyclerViewAdapterHistory extends RecyclerView.Adapter<RecyclerVie
 
         final History history = histories.get(position);
 
-        holder.enWord.setText(history.getEn_word());
-        holder.enDef.setText(history.getEn_def());
+        holder.enWord.setText(history.get_en_word());
+        holder.enDef.setText(history.get_def());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                itemClickListener.onItemClickListener(position, history.getEn_word(), holder.enWord);
+                itemClickListener.onItemClickListener(position, history.get_en_word(), holder.enWord);
             }
         });
 
